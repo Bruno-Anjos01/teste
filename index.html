@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Acesso+ encontra locais públicos mais acessíveis para cada pessoa."
+    >
+
+    <title>Acesso+ | Mapa de Acessibilidade</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         TELA INICIAL
+    ========================== -->
+
+    <main id="welcomeScreen" class="welcome-screen">
+
+        <div class="welcome-content">
+
+            <div class="brand">
+                <div class="brand-icon" aria-hidden="true">
+                    ♿
+                </div>
+
+                <span>Acesso<span>+</span></span>
+            </div>
+
+            <div class="welcome-badge">
+                ● Feito para todos
+            </div>
+
+            <h1>
+                Encontre lugares
+                <span>acessíveis para você.</span>
+            </h1>
+
+            <p class="welcome-description">
+                Escolha suas necessidades de acessibilidade e encontre
+                restaurantes, mercados, cinemas, shoppings e outros locais
+                preparados para receber você.
+            </p>
+
+            <button
+                id="startButton"
+                class="primary-button"
+                type="button"
+            >
+                Começar
+                <span>→</span>
+            </button>
+
+            <div class="trust-items">
+                <div>
+                    <strong>♿</strong>
+                    Acessibilidade física
+                </div>
+
+                <div>
+                    <strong>👁</strong>
+                    Acessibilidade visual
+                </div>
+
+                <div>
+                    <strong>🤟</strong>
+                    Libras
+                </div>
+
+                <div>
+                    <strong>🧩</strong>
+                    Neurodiversidade
+                </div>
+            </div>
+
+        </div>
+
+        <div class="welcome-decoration">
+
+            <div class="floating-card card-one">
+                <span>♿</span>
+                <div>
+                    <strong>Rampa de acesso</strong>
+                    <small>Disponível</small>
+                </div>
+            </div>
+
+            <div class="floating-card card-two">
+                <span>🤟</span>
+                <div>
+                    <strong>Atendimento em Libras</strong>
+                    <small>Confirmado</small>
+                </div>
+            </div>
+
+            <div class="floating-card card-three">
+                <span>🔊</span>
+                <div>
+                    <strong>Áudio disponível</strong>
+                    <small>Para pessoas cegas</small>
+                </div>
+            </div>
+
+            <div class="big-accessibility-icon">
+                ♿
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- =========================
+         APP PRINCIPAL
+    ========================== -->
+
+    <main id="app" class="app hidden">
+
+        <header class="topbar">
+
+            <div class="brand small">
+                <div class="brand-icon">
+                    ♿
+                </div>
+
+                <span>Acesso<span>+</span></span>
+            </div>
+
+            <div class="header-actions">
+
+                <button
+                    id="speakButton"
+                    class="icon-button"
+                    type="button"
+                    aria-label="Ativar leitura por voz"
+                    title="Leitura por voz"
+                >
+                    🔊
+                </button>
+
+                <button
+                    id="locationButton"
+                    class="location-button"
+                    type="button"
+                >
+                    📍 Usar minha localização
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =========================
+             PREFERÊNCIAS
+        ========================== -->
+
+        <section class="preferences">
+
+            <div>
+                <span class="section-label">MINHAS NECESSIDADES</span>
+
+                <h2>
+                    O que você precisa?
+                </h2>
+
+                <p>
+                    Selecione uma ou mais opções para personalizar o mapa.
+                </p>
+            </div>
+
+            <div class="accessibility-options">
+
+                <label class="accessibility-option wheelchair">
+                    <input
+                        type="checkbox"
+                        value="wheelchair"
+                    >
+
+                    <span class="option-icon">♿</span>
+
+                    <span>
+                        <strong>Cadeirante</strong>
+                        <small>Rampas e banheiros</small>
+                    </span>
+                </label>
+
+
+                <label class="accessibility-option visual">
+                    <input
+                        type="checkbox"
+                        value="visual"
+                    >
+
+                    <span class="option-icon">👁</span>
+
+                    <span>
+                        <strong>Deficiência visual</strong>
+                        <small>Áudio e sinalização</small>
+                    </span>
+                </label>
+
+
+                <label class="accessibility-option hearing">
+                    <input
+                        type="checkbox"
+                        value="hearing"
+                    >
+
+                    <span class="option-icon">🤟</span>
+
+                    <span>
+                        <strong>Surdez</strong>
+                        <small>Libras e atendimento</small>
+                    </span>
+                </label>
+
+
+                <label class="accessibility-option autism">
+                    <input
+                        type="checkbox"
+                        value="autism"
+                    >
+
+                    <span class="option-icon">🧩</span>
+
+                    <span>
+                        <strong>Autismo</strong>
+                        <small>Ambiente tranquilo</small>
+                    </span>
+                </label>
+
+
+                <label class="accessibility-option elderly">
+                    <input
+                        type="checkbox"
+                        value="elderly"
+                    >
+
+                    <span class="option-icon">🧓</span>
+
+                    <span>
+                        <strong>Mobilidade reduzida</strong>
+                        <small>Assentos e elevadores</small>
+                    </span>
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTEÚDO
+        ========================== -->
+
+        <section class="content">
+
+            <div class="map-area">
+
+                <div class="map-toolbar">
+
+                    <div class="search-box">
+
+                        <span>⌕</span>
+
+                        <input
+                            id="searchInput"
+                            type="search"
+                            placeholder="Buscar restaurantes, mercados..."
+                            aria-label="Buscar locais"
+                        >
+
+                    </div>
+
+                    <button
+                        id="filterButton"
+                        class="filter-button"
+                        type="button"
+                    >
+                        ☰ Filtros
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="map"
+                    class="map"
+                    aria-label="Mapa de locais acessíveis"
+                >
+
+                    <div class="map-loading">
+                        <div class="spinner"></div>
+                        <span>Carregando mapa...</span>
+                    </div>
+
+                </div>
+
+
+                <div class="map-legend">
+
+                    <span>
+                        <i class="legend-dot green"></i>
+                        Muito acessível
+                    </span>
+
+                    <span>
+                        <i class="legend-dot yellow"></i>
+                        Parcialmente acessível
+                    </span>
+
+                    <span>
+                        <i class="legend-dot red"></i>
+                        Pouca informação
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 LOCAIS
+            ========================== -->
+
+            <aside class="places-panel">
+
+                <div class="places-header">
+
+                    <div>
+                        <span class="section-label">
+                            PERTO DE VOCÊ
+                        </span>
+
+                        <h2 id="resultsTitle">
+                            Locais recomendados
+                        </h2>
+                    </div>
+
+                    <span id="resultCount" class="result-count">
+                        0 locais
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="placesList"
+                    class="places-list"
+                >
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         MODAL DO LOCAL
+    ========================== -->
+
+    <div
+        id="placeModal"
+        class="modal hidden"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-card">
+
+            <button
+                id="closeModal"
+                class="modal-close"
+                type="button"
+                aria-label="Fechar"
+            >
+                ×
+            </button>
+
+            <div id="modalContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Google Maps
+         Substitua SUA_CHAVE_GOOGLE_MAPS pela sua API Key.
+    -->
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_GOOGLE_MAPS&libraries=places&language=pt-BR&region=BR&callback=initMap"
+        async
+        defer
+    ></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
